@@ -1,29 +1,45 @@
-# README #
+# Criação de usuário #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+A ideia desse projeto é criar um exemplo de como aplicar os conceitos de BDD para criação de testes.
 
-### What is this repository for? ###
+## História de usuário
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Como novo usuário quero me cadastrar enviando , username, name, email, password e passwordConfirmation.
 
-### How do I get set up? ###
+## Cenários 
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### Cenário 1
+Sendo que sou um novo usuário
+Quando envio username, name, email, password e passwordConfirmation
+Então recebo resposta com statusCode 201, com um corpo contendo, id, name, email, username não podendo receber password
 
-### Contribution guidelines ###
+### Cenário 2
+Sendo que sou um novo usuário
+Quando não envio username
+Então recebo resposta com statusCode 400, com um corpo contendo, message: 'Missing Parameter username'
 
-* Writing tests
-* Code review
-* Other guidelines
+### Cenário 3
+Sendo que sou um novo usuário
+Quando não envio name
+Então recebo resposta com statusCode 400, com um corpo contendo, message: 'Missing Parameter name'
 
-### Who do I talk to? ###
+### Cenário 4
+Sendo que sou um novo usuário
+Quando não envio email
+Então recebo resposta com statusCode 400, com um corpo contendo, message: 'Missing Parameter email'
 
-* Repo owner or admin
-* Other community or team contact
+### Cenário 5
+Sendo que sou um novo usuário
+Quando não envio password
+Então recebo resposta com statusCode 400, com um corpo contendo, message: 'Missing Parameter password'
+
+### Cenário 6
+Sendo que sou um novo usuário
+Quando não envio password
+Então recebo resposta com statusCode 400, com um corpo contendo, message: 'Missing Parameter passwordConfirmation'
+
+### Cenário 7
+Sendo que sou um novo usuário
+Quando envio password e passwordConfirmation diferentes
+Então recebo resposta com statusCode 400, com um corpo contendo, message: 'Invalid Parameter passwordConfirmation'
+
