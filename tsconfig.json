@@ -14,7 +14,7 @@
 		"allowSyntheticDefaultImports": true,
 		"strictPropertyInitialization": false,
 		"noImplicitAny": false,
-    	"noImplicitThis": false,
+		"noImplicitThis": false,
 		"noImplicitReturns": false,
 		"declaration": true,
 		"noFallthroughCasesInSwitch": true,	
